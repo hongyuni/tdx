@@ -69,6 +69,8 @@ bool tdx_early_handle_ve(struct pt_regs *regs);
 
 long tdx_mcall_tdreport(void *data, void *reportdata);
 
+long tdx_hcall_get_quote(void *data, u64 len);
+
 #else
 
 static inline void tdx_early_init(void) { };
